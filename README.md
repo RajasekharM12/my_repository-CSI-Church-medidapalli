@@ -1,1 +1,1 @@
-# my_repository-CSI-Church-medidapalli
+# CSI-Church-medidapalli
