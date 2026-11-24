@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHURCH NAME</title>
+<!-- ============================================================
+  HOW TO EDIT / ఎలా మార్చాలి:
+  1. Ctrl+F తో "EDIT" వెతకండి. ఆ చోట్ల మీ సమాచారం రాయండి.
+  2. ప్రతి చోట రెండు భాషలు ఉంటాయి:
+       <span class="te"> తెలుగు ఇక్కడ </span>
+       <span class="en"> English here </span>
+     రెండూ మార్చండి.
+  3. Photos ని "images" folder లో పెట్టండి.
+  4. YouTube: VIDEO_ID ని మీ video ID తో మార్చండి.
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2118; --muted:#6b5d50; --bg:#fbf7f0; --card:#ffffff;
+    --accent:#8a5a2b; --accent-dark:#5e3b17; --line:#e8dccb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans Telugu',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+  img{max-width:100%;display:block}
+  a{color:var(--accent-dark)}
+
+  /* Language switch */
+  body.lang-en .te{display:none}
+  body:not(.lang-en) .en{display:none}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(251,247,240,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;flex-wrap:wrap;gap:8px}
+  .logo{font-family:'Playfair Display','Noto Sans Telugu',serif;font-weight:700;font-size:1.2rem;color:var(--accent-dark);text-decoration:none}
+  nav ul{display:flex;gap:16px;list-style:none;flex-wrap:wrap;align-items:center}
+  nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink)}
+  nav a:hover{color:var(--accent)}
+  .langbtn{border:2px solid var(--accent);background:transparent;color:var(--accent-dark);font:inherit;font-weight:700;padding:4px 14px;border-radius:999px;cursor:pointer}
+  .langbtn:hover{background:var(--accent);color:#fff}
+
+  .hero{
+    min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px 20px;
+    background:linear-gradient(rgba(40,25,10,.55),rgba(40,25,10,.55)),url('images/church-main.jpg') center/cover,#5e3b17;
+  }
+  .hero h1{font-family:'Playfair Display','Noto Sans Telugu',serif;font-size:clamp(2rem,6vw,3.6rem);line-height:1.25;margin-bottom:12px}
+  .hero p{font-size:1.15rem;max-width:620px;margin:0 auto 24px;opacity:.95}
+  .btn{display:inline-block;background:#fff;color:var(--accent-dark);padding:12px 28px;border-radius:999px;font-weight:700;text-decoration:none}
+  .btn:hover{background:var(--line)}
+
+  section{padding:70px 20px}
+  .wrap{max-width:1100px;margin:auto}
+  h2{font-family:'Playfair Display','Noto Sans Telugu',serif;font-size:2rem;color:var(--accent-dark);text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:var(--muted);margin-bottom:36px}
+  .alt{background:#f3ebdc}
+
+  .history{max-width:800px;margin:auto;font-size:1.08rem}
+  .history p{margin-bottom:16px}
+  .timeline{margin-top:28px;border-left:3px solid var(--accent);padding-left:20px}
+  .timeline div{margin-bottom:18px}
+  .timeline b{color:var(--accent-dark)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px}
+  .person{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .person img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--line)}
+  .person .info{padding:14px}
+  .person h3{font-size:1.05rem}
+  .person small{color:var(--muted);font-size:.92rem}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--line);cursor:zoom-in;transition:transform .2s}
+  .gallery img:hover{transform:scale(1.02)}
+
+  .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .box h3{color:var(--accent-dark);margin-bottom:10px}
+  .map{margin-top:22px;border-radius:12px;overflow:hidden}
+  .map iframe{width:100%;height:320px;border:0}
+
+  footer{background:var(--accent-dark);color:#f3ebdc;text-align:center;padding:26px 20px;font-size:.92rem}
+
+  #lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:20px}
+  #lb img{max-height:92vh;border-radius:8px}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="#top">✝ C.S.I. ST.LUKE CHURCH</a>
+    <ul>
+      <li><a href="#history"><span class="te">చరిత్ర</span><span class="en">History</span></a></li>
+      <li><a href="#servants"><span class="te">సేవకులు</span><span class="en">Servants</span></a></li>
+      <li><a href="#photos"><span class="te">ఫోటోలు</span><span class="en">Photos</span></a></li>
+      <li><a href="#videos"><span class="te">వీడియోలు</span><span class="en">Videos</span></a></li>
+      <li><a href="#contact"><span class="te">సంప్రదించండి</span><span class="en">Contact</span></a></li>
+      <li><button class="langbtn" id="langbtn" type="button">English</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero" id="top">
+  <div>
+    <h1>
+      <span class="te">పరి.లూకా దేవాలయం , మేడిదపల్లి <br>స్వాగతం</span>
+      <span class="en">CHURCH NAME<br>Welcome</span>
+    </h1>
+    <p>
+      <span class="te">EDIT: ప్రభువు నామములో మిమ్మల్ని ఆహ్వానిస్తున్నాము.</span>
+      <span class="en">EDIT: We welcome you in the name of the Lord.</span>
+    </p>
+    <a class="btn" href="#contact"><span class="te">ఆరాధన సమయాలు</span><span class="en">Service Timings</span></a>
+  </div>
+</div>
+
+<!-- ===== HISTORY ===== -->
+<section id="history">
+  <div class="wrap">
+    <h2><span class="te">మా చర్చి చరిత్ర</span><span class="en">Our Church History</span></h2>
+    <p class="sub"><span class="te">దేవుడు మమ్మల్ని నడిపించిన విధానం</span><span class="en">How God has led us</span></p>
+    <div class="history">
+      <p>
+        <span class="te">EDIT: చర్చి ఎప్పుడు, ఎక్కడ, ఎవరి ద్వారా ప్రారంభమైందో ఇక్కడ రాయండి.</span>
+        <span class="en">EDIT: Write when, where and through whom the church began.</span>
+      </p>
+      <p>
+        <span class="te">EDIT: రెండో paragraph. ముఖ్యమైన సంఘటనలు, భవన నిర్మాణం, ఆశీర్వాదాలు.</span>
+        <span class="en">EDIT: Second paragraph. Key events, building construction, blessings.</span>
+      </p>
+      <div class="timeline">
+        <!-- EDIT: సంవత్సరాలు, సంఘటనలు. కావాల్సినన్ని <div> లు copy చేయండి -->
+        <div><b>19XX</b> – <span class="te">EDIT: చర్చి ప్రారంభం</span><span class="en">EDIT: Church started</span></div>
+        <div><b>19XX</b> – <span class="te">EDIT: మొదటి భవన నిర్మాణం</span><span class="en">EDIT: First building built</span></div>
+        <div><b>20XX</b> – <span class="te">EDIT: కొత్త భవనం</span><span class="en">EDIT: New building</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVANTS ===== -->
+<section id="servants" class="alt">
+  <div class="wrap">
+    <h2><span class="te">ఇప్పటివరకు సేవ చేసిన సేవకులు</span><span class="en">Servants Who Have Served</span></h2>
+    <p class="sub"><span class="te">మా చర్చిని నడిపించిన దైవ సేవకులు</span><span class="en">The servants of God who led our church</span></p>
+    <div class="grid">
+      <!-- EDIT: ప్రతి సేవకుడికి ఒక block. ఎక్కువ మంది ఉంటే block ని copy-paste చేయండి -->
+      <div class="person">
+        <img src="images/pastor1.jpg" alt="Pastor 1">
+        <div class="info">
+          <h3><span class="te">పాస్టర్ పేరు 1</span><span class="en">Pastor Name 1</span></h3>
+          <small>19XX – 19XX</small>
+        </div>
+      </div>
+      <div class="person">
+        <img src="images/pastor2.jpg" alt="Pastor 2">
+        <div class="info">
+          <h3><span class="te">పాస్టర్ పేరు 2</span><span class="en">Pastor Name 2</span></h3>
+          <small>19XX – 20XX</small>
+        </div>
+      </div>
+      <div class="person">
+        <img src="images/pastor3.jpg" alt="Pastor 3">
+        <div class="info">
+          <h3><span class="te">పాస్టర్ పేరు 3</span><span class="en">Pastor Name 3</span></h3>
+          <small><span class="te">20XX – ప్రస్తుతం</span><span class="en">20XX – Present</span></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTOS ===== -->
+<section id="photos">
+  <div class="wrap">
+    <h2><span class="te">చర్చి ఫోటోలు</span><span class="en">Church Photos</span></h2>
+    <p class="sub"><span class="te">ఫోటో మీద నొక్కితే పెద్దగా కనిపిస్తుంది</span><span class="en">Tap a photo to enlarge</span></p>
+    <div class="gallery">
+      <!-- EDIT: ఫోటోల పేర్లు (images folder లో ఉన్నవి) -->
+      <img src="images/church1.jpg" alt="Church photo">
+      <img src="images/church2.jpg" alt="Church photo">
+      <img src="images/church3.jpg" alt="Church photo">
+      <img src="images/church4.jpg" alt="Church photo">
+      <img src="images/church5.jpg" alt="Church photo">
+      <img src="images/church6.jpg" alt="Church photo">
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section id="videos" class="alt">
+  <div class="wrap">
+    <h2><span class="te">వీడియోలు</span><span class="en">Videos</span></h2>
+    <p class="sub"><span class="te">ఆరాధనలు, సందేశాలు</span><span class="en">Worship and messages</span></p>
+    <div class="videos">
+      <!-- EDIT: VIDEO_ID ని మీ YouTube video ID తో మార్చండి -->
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" loading="lazy" allowfullscreen></iframe></div>
+    </div>
+    <p class="sub" style="margin-top:20px">
+      <!-- EDIT: YOUR_CHANNEL ని మీ channel పేరుతో మార్చండి -->
+      <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener"><span class="te">మా YouTube Channel లో మరిన్ని వీడియోలు</span><span class="en">More videos on our YouTube Channel</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <h2><span class="te">సంప్రదించండి</span><span class="en">Contact Us</span></h2>
+    <p class="sub"><span class="te">మిమ్మల్ని ఆహ్వానిస్తున్నాము</span><span class="en">You are welcome</span></p>
+    <div class="contact">
+      <div class="box">
+        <h3><span class="te">ఆరాధన సమయాలు</span><span class="en">Service Timings</span></h3>
+        <p><span class="te">ఆదివారం: EDIT ఉదయం 9:00</span><span class="en">Sunday: EDIT 9:00 AM</span></p>
+        <p><span class="te">బుధవారం: EDIT సాయంత్రం 6:30</span><span class="en">Wednesday: EDIT 6:30 PM</span></p>
+      </div>
+      <div class="box">
+        <h3><span class="te">చిరునామా</span><span class="en">Address</span></h3>
+        <p>
+          <span class="te">పరి.లూకా దేవాలయం, మేడిదపల్లి<br>మేడిదపల్లి పాస్టరేట్, తిరుమలాయపాలెం మండలం, ఖమ్మం జిల్లా – PIN 507161</span>
+          <span class="en">CSI St. Luke Church, Medidapalli<br>Medidapalli Pastorate, Thirumalayapalem Mandal, Khammam District – PIN 507161</span>
+        </p>
+      </div>
+      <div class="box">
+        <h3><span class="te">ఫోన్ / Email</span><span class="en">Phone / Email</span></h3>
+        <!-- EDIT: మీ నంబర్, email -->
+        <p>📞 <a href="tel:+910000000000">+91 00000 00000</a></p>
+        <p>✉ <a href="mailto:church@example.com">church@example.com</a></p>
+      </div>
+    </div>
+    <div class="map">
+      <!-- EDIT (ఐచ్ఛికం): Google Maps లో చర్చి వెతికి, Share → Embed a map లో వచ్చే iframe ని ఇక్కడ paste చేయండి -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> CSI ST.LUKE CHURCH.
+  <span class="te">అన్ని హక్కులు ప్రత్యేకించబడ్డాయి.</span><span class="en">All rights reserved.</span>
+</footer>
+
+<div id="lb"><img alt=""></div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Language toggle (remembers the visitor's choice)
+  const btn = document.getElementById('langbtn');
+  function setLang(l){
+    document.body.classList.toggle('lang-en', l === 'en');
+    document.documentElement.lang = l;
+    btn.textContent = l === 'en' ? 'తెలుగు' : 'English';
+    try{ localStorage.setItem('lang', l); }catch(e){}
+  }
+  let saved = 'te';
+  try{ saved = localStorage.getItem('lang') || 'te'; }catch(e){}
+  setLang(saved);
+  btn.addEventListener('click', ()=> setLang(document.body.classList.contains('lang-en') ? 'te' : 'en'));
+
+  // Photo lightbox
+  const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('.gallery img').forEach(i=>{
+    i.addEventListener('click',()=>{lbImg.src=i.src;lb.style.display='flex'});
+  });
+  lb.addEventListener('click',()=>lb.style.display='none');
+</script>
+</body>
+</html>
